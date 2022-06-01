@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | awk 'NR%2' 
+ls | xargs -n 2 | cut -d ' ' -f 1 
