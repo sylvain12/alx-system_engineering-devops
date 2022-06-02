@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" $( cat An\ Acrostic | cut -d ' ' -f1 | awk '{print(substr($0,1,1))}' | tr '\n' ' ' | tr -d ' ')
+cut -f1 | sort -d | uniq -c | sort -d | head -n 11 | xargs -n 2 | cut -d ' ' -f2
